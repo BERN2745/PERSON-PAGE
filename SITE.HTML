@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Personnelle - Cryptomonnaie & Arbitrage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4caf50;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        section {
+            padding: 2em;
+            margin: 2em;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px 0;
+            background-color: #4caf50;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<header>
+    <h1>Bienvenue sur ma page personnelle</h1>
+    <p>Exploration des Cryptomonnaies et Algorithmes d'Arbitrage</p>
+</header>
+
+<nav>
+    <a href="#about">À propos</a>
+    <a href="#projects">Projets</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+    <h2>À propos de moi</h2>
+    <p>Passionné par les cryptomonnaies et les algorithmes d'arbitrage, je développe des stratégies pour maximiser les profits en exploitant les différences de prix entre différents marchés. Mon expertise comprend l'analyse de données, la programmation et la finance décentralisée.</p>
+</section>
+
+<section id="projects">
+    <h2>Projets</h2>
+    <p>Voici quelques-uns des projets sur lesquels j'ai travaillé :</p>
+    <ul>
+        <li><strong>Bot d'Arbitrage Automatisé :</strong> Un bot qui utilise des algorithmes avancés pour détecter et exploiter les opportunités d'arbitrage en temps réel.</li>
+        <li><strong>Analyse de Marché des Cryptomonnaies :</strong> Un outil pour analyser les tendances du marché et prédire les mouvements de prix en utilisant des techniques de machine learning.</li>
+    </ul>
+    <canvas id="myChart" width="400" height="200"></canvas>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Pour en savoir plus sur mes projets ou pour toute autre question, n'hésitez pas à me contacter via mes réseaux sociaux :</p>
+    <a href="https://www.linkedin.com" class="btn">LinkedIn</a>
+    <a href="https://github.com" class="btn">GitHub</a>
+    <a href="https://twitter.com" class="btn">Twitter</a>
+</section>
+
+<footer>
+    <p>&copy; 2024 - Ma Page Personnelle sur les Cryptomonnaies et Algorithmes d'Arbitrage</p>
+</footer>
+
+<script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Bitcoin', 'Ethereum', 'Litecoin', 'Ripple', 'Dash'],
+            datasets: [{
+                label: 'Prix actuel des cryptomonnaies',
+                data: [45000, 3000, 150, 1.2, 200],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>
+
+</body>
+</html>
